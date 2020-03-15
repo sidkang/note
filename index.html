@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
   
   <!-- plugins -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/prism/themes/prism-dark.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
 </head>
 <body>
   <div id="app"></div>
@@ -21,11 +21,12 @@
       repo: 'https://github.com/sidkang/note',
       loadSidebar: 'sidebar.md',
       // customization
-      subMaxLevel: 3,
+      subMaxLevel: 4,
       formatUpdated: '{YY}/{MM}/{DD}',
       // ------------------------------------
       // plugins
       // docsify tabs
+      executeScript: true,
       tabs: {
         theme: 'material',      // classic material
         persist: true,      // default

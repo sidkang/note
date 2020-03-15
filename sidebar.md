@@ -11,4 +11,5 @@
 - **Reference**
   - [Markdown Reference](extra/reference.md)
   - [Chart](extra/chart.md)
-  - [highlighter](./extra/language_highlight.md)
+  - [highlighter](extra/language_highlight.md)
+  - [Diagram](extra/diagram.md)
