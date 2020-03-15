@@ -17,5 +17,4 @@
 
 * [SETAPP](https://setapp.com)
 * [G Suite](https://gsuite.google.com)
-* V*N服务
 * [财新](http://www.caixin.com/?HOLDZH)

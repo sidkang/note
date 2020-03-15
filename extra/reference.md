@@ -396,6 +396,24 @@ Ciao!
 
 <!-- tabs:end -->
 
+## Links(File Links)
+
+<!-- tabs:start -->
+
+#### ** Rendered **
+
+[File](extra/pdf.pdf ':ignore')
+
+
+
+#### ** Markdown **
+
+````markdown
+[File](extra/pdf.pdf ':ignore')
+````
+
+<!-- tabs:end -->
+
 ## Images
 
 <!-- tabs:start -->
@@ -405,6 +423,11 @@ Ciao!
 Inline-style
 
 ![](./image/example.png)
+
+![](image/example.png)
+
+
+
 
 ![alt text](//source.unsplash.com/daily "Provided by unsplash.com")
 
