@@ -499,6 +499,8 @@ Ciao!
 
 Inline-style
 
+![](https://note.sidkang.com/extra/image/example.png)
+
 ![alt text](//source.unsplash.com/daily "Provided by unsplash.com")
 
 Reference-style
