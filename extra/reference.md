@@ -1,11 +1,10 @@
 # MARKDOWN REFERENCE
 
-<!-- <p align="right">By：康继元<br />更新日期：{docsify-updated}</p> -->
+<p align="right">更新日期：{docsify-updated}</p>
 <!-- <p align="right"><font face ="微软雅黑">微软雅黑</font></p> -->
 <!-- <div style="position: relative;"><div>这是一条新闻</div><div style="position: absolute; right: 0px; top: 0px;">2013-05-1</div></div> -->
 
 
-?> 这部分是文档系统所使用的语法格式，有兴趣的同事可以参考此处进行文档的写作，通过页内Tab切换查看语法和输出结果，语法其实还是相对简单的～
 
 ## Headings
 
