@@ -4,10 +4,10 @@
   * [My Setup](computer/setup.md)
   * [My Mac]()
 
-* [**Coding**]
+* **Coding**
   * [Python]()
   * [Rust](coding/rust/README.md)
-    * 
+
 - **Reference**
   - [Markdown Reference](extra/reference.md)
   - [Chart](extra/chart.md)
