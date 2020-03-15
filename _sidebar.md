@@ -1,4 +1,4 @@
-* [START HERE](/)
+* [START HERE](extra/reference.md)
 * Second Page
 * [third page](extra/reference.md)
 
