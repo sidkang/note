@@ -1,7 +1,8 @@
-* [START HERE](extra/reference.md)
+* [START HERE](/)
 * Second Page
 * [third page](extra/reference.md)
 
 - EXTRA(Doscify Related)
   - [Markdown Reference](extra/reference.md)
   - [Chart](extra/chart.md)
+  - [highlighter](extra/language_highlight.md)
