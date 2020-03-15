@@ -1,3 +1,3 @@
-# This is the README page
+# Headline
 
-更新日期：{docsify-updated}
+> An awesome project.
