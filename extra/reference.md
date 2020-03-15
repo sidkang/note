@@ -333,7 +333,7 @@ Bonjour!
 
 Ciao!
 
-#### ** Markdown **
+#### ** Markdown(CSS) **
 
 ```markdown
 <!-- tabs:start -->
@@ -352,6 +352,23 @@ Ciao!
 
 <!-- tabs:end -->
 ```
+
+#### **Tab CSS Customization**
+
+````css
+// For the Markdown(CSS) Tab
+.docsify-tabs__tab--active[data-tab="markdown(css)"] {
+    box-shadow: none;
+    background: #13547a;
+    color: white;
+}
+.docsify-tabs__content[data-tab-content="markdown(css)"] {
+    background-image: linear-gradient(0deg, #80d0c7 0%, #13547a 100%);
+}
+.docsify-tabs__content[data-tab-content="markdown(css)"] p strong {
+    color: white;
+}
+````
 
 <!-- tabs:end -->
 
@@ -375,118 +392,6 @@ Ciao!
 | A1         | A2           | A3          | A4                             |
 | B1         | B2           | B3          | B4                             |
 | C1         | C2           | C3          | C4                             |
-```
-
-<!-- tabs:end -->
-
-## Keyboard
-
-<!-- tabs:start -->
-
-#### ** Rendered **
-
-<kbd>&uarr;</kbd> Arrow Up
-
-<kbd>&darr;</kbd> Arrow Down
-
-<kbd>&larr;</kbd> Arrow Left
-
-<kbd>&rarr;</kbd> Arrow Right
-
-<kbd>&#8682;</kbd> Caps Lock
-
-<kbd>&#8984;</kbd> Command
-
-<kbd>&#8963;</kbd> Control
-
-<kbd>&#9003;</kbd> Delete
-
-<kbd>&#8998;</kbd> Delete (Forward)
-
-<kbd>&#8600;</kbd> End
-
-<kbd>&#8996;</kbd> Enter
-
-<kbd>&#9099;</kbd> Escape
-
-<kbd>&#8598;</kbd> Home
-
-<kbd>&#8670;</kbd> Page Up
-
-<kbd>&#8671;</kbd> Page Down
-
-<kbd>&#8997;</kbd> Option, Alt
-
-<kbd>&#8629;</kbd> Return
-
-<kbd>&#8679;</kbd> Shift
-
-<kbd>&#9251;</kbd> Space
-
-<kbd>&#8677;</kbd> Tab
-
-<kbd>&#8676;</kbd> Tab + Shift
-
-#### ** Markdown **
-
-```markdown
-<kbd>&uarr;</kbd> Arrow Up
-
-<kbd>&darr;</kbd> Arrow Down
-
-<kbd>&larr;</kbd> Arrow Left
-
-<kbd>&rarr;</kbd> Arrow Right
-
-<kbd>&#8682;</kbd> Caps Lock
-
-<kbd>&#8984;</kbd> Command
-
-<kbd>&#8963;</kbd> Control
-
-<kbd>&#9003;</kbd> Delete
-
-<kbd>&#8998;</kbd> Delete (Forward)
-
-<kbd>&#8600;</kbd> End
-
-<kbd>&#8996;</kbd> Enter
-
-<kbd>&#9099;</kbd> Escape
-
-<kbd>&#8598;</kbd> Home
-
-<kbd>&#8670;</kbd> Page Up
-
-<kbd>&#8671;</kbd> Page Down
-
-<kbd>&#8997;</kbd> Option, Alt
-
-<kbd>&#8629;</kbd> Return
-
-<kbd>&#8679;</kbd> Shift
-
-<kbd>&#9251;</kbd> Space
-
-<kbd>&#8677;</kbd> Tab
-
-<kbd>&#8676;</kbd> Tab + Shift
-```
-
-<!-- tabs:end -->
-
-## Horizontal Rule
-
-<!-- tabs:start -->
-
-#### ** Rendered **
-
----
-
-#### ** Markdown **
-
-```markdown
----
 ```
 
 <!-- tabs:end -->
@@ -599,6 +504,9 @@ This panel is a demo. but you can see more in:
 
 > [!DANGER|style:flat]
 > An alert of type 'note' using alert specific style 'flat' which overrides global style 'callout'.
+
+> [!COMMENT|style:flat]
+> An alert of type 'comment' using style 'callout' with default settings.
 
 #### ** Markdown **
 

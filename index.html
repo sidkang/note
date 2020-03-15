@@ -7,6 +7,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
   
   <!-- plugins -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/prism/themes/prism-dark.css">
@@ -26,11 +27,19 @@
       // plugins
       // docsify tabs
       tabs: {
-        theme: 'material',      // default
+        theme: 'material',      // classic material
         persist: true,      // default
         sync: false,      // default
         tabComments: true,      // default
         tabHeadings: true       // default
+      },
+      flexibleAlerts: {
+        comment: {
+          label: "Comment",
+          // Assuming that we use Font Awesome
+          icon: "fas fa-comment",
+          className: "info"
+        }
       },
       plugins: [
         function(hook, vm) {
@@ -64,6 +73,8 @@
 
   <!-- plugins -->
   <!-- -------------------- -->
+  <!-- docsify alert -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts/dist/docsify-plugin-flexible-alerts.min.js"></script>
   <!-- doscify panels -->
   <script src="//cdn.jsdelivr.net/npm/docsify-example-panels"></script>
   <!-- docsify tab -->
