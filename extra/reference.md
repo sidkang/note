@@ -543,11 +543,16 @@ This browser does not support PDFs. Please download the PDF to view it:
 
 #### ** Markdown **
 
-```markdown
+```html
+// three methods to embed pdf file without using javascript
+<embed src="extra/pdf.pdf#page=2" type="application/pdf" width="100%" height="500px">
 
-​<embed src="extra/pdf.pdf#page=2" type="application/pdf" width="100%" height="100%">
 
-<object data="extra/pdf.pdf#page=2" type="application/pdf" width="100%" height="500px">
+<iframe src="extra/pdf.pdf#page=2" width="100%" height="500px" style="border: none;">
+This browser does not support PDFs. Please download the PDF to view it: 
+<a href="extra/pdf.pdf#page=2">Download PDF</a></iframe>
+
+<object data="extra/pdf.pdf#page=2" type="application/pdf" width="100%" height="500px" style="border: none;">
 <p><b>Example fallback content</b>: This browser does not support PDFs. Please download the PDF to view it: 
 <a href="extra/pdf.pdf">Download PDF</a>.</p>
 </object>
