@@ -616,30 +616,30 @@ This panel is a demo. but you can see more in:
 
 #### ** Rendered **
 
-<embed src="FAQ.pdf#page=2" type="application/pdf" width="100%" height="500px">
+<embed src="extra/pdf.pdf#page=2" type="application/pdf" width="100%" height="500px">
 
 ---
 
-<iframe src="FAQ.pdf#page=2" width="100%" height="500px" style="border: none;">
+<iframe src="extra/pdf.pdf#page=2" width="100%" height="500px" style="border: none;">
 This browser does not support PDFs. Please download the PDF to view it: 
-<a href="FAQ.pdf#page=2">Download PDF</a></iframe>
+<a href="extra/pdf.pdf#page=2">Download PDF</a></iframe>
 
 ---
 
-<object data="FAQ.pdf#page=2" type="application/pdf" width="100%" height="500px" style="border: none;">
+<object data="extra/pdf.pdf#page=2" type="application/pdf" width="100%" height="500px" style="border: none;">
 <p><b>Example fallback content</b>: This browser does not support PDFs. Please download the PDF to view it: 
-<a href="FAQ.pdf">Download PDF</a>.</p>
+<a href="extra/pdf.pdf">Download PDF</a>.</p>
 </object>
 
 #### ** Markdown **
 
 ```markdown
 
-​<embed src="FAQ.pdf#page=2" type="application/pdf" width="100%" height="100%">
+​<embed src="extra/pdf.pdf#page=2" type="application/pdf" width="100%" height="100%">
 
-<object data="FAQ.pdf#page=2" type="application/pdf" width="100%" height="500px">
+<object data="extra/pdf.pdf#page=2" type="application/pdf" width="100%" height="500px">
 <p><b>Example fallback content</b>: This browser does not support PDFs. Please download the PDF to view it: 
-<a href="FAQ.pdf">Download PDF</a>.</p>
+<a href="extra/pdf.pdf">Download PDF</a>.</p>
 </object>
 
 ```
