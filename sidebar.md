@@ -13,4 +13,3 @@
   - [Chart](extra/chart.md)
   - [highlighter](extra/language_highlight.md)
   - [Diagram](extra/diagram.md)
-  - [EasyMD](extra/easy_md.md)
