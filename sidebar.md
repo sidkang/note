@@ -1,5 +1,8 @@
 * [**START HERE**](/)
 
+* **Inbox**
+  * [Clash Gateway](inbox/clash-as-gateway.md)
+
 * [**Computer**](computer/README.md)
   * [My Setup](computer/setup.md)
   * [My Mac]()
