@@ -50,44 +50,44 @@
       plantuml: {
         skin: 'default',
       },
-      markdown: {
-        renderer: {
-          code: function (code, lang) {
-            if (lang === "mermaid") {
-              return (
-                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + id++, code) + "</div>"
-              );
-            }
-            return this.origin.code.apply(this, arguments);
-          }
-        }
-      }
-      // plugins: [
-      //   function(hook, vm) {
-      //     hook.ready(function () {
-      //       mermaid.initialize({startOnLoad: false});
-      //     });
-      //     hook.doneEach(function () {
-      //       mermaid.init(undefined,'.mermaid');
-      //     });
-      //   }
-      // ],
       // markdown: {
       //   renderer: {
-      //     code: function(code, lang) {
+      //     code: function (code, lang) {
       //       if (lang === "mermaid") {
-      //         var html = '';
-      //         if(code.match(/^sequenceDiagram/) || code.match(/^graph/) || code.match(/^gantt/)){
-      //           html = '<div class="mermaid">' + code + '</div>';
-      //         }
-      //         var hl = Prism.highlight(code, Prism.languages[lang] || Prism.languages.markup)
-      //         // return html + '<pre v-pre data-lang="' + lang + '"><code class="lang-' + lang + '">' + hl + '</code></pre>'
-      //         return html;
+      //         return (
+      //           '<div class="mermaid">' + mermaid.render('mermaid-svg-' + id++, code) + "</div>"
+      //         );
       //       }
       //       return this.origin.code.apply(this, arguments);
       //     }
       //   }
       // }
+      plugins: [
+        function(hook, vm) {
+          hook.ready(function () {
+            mermaid.initialize({startOnLoad: true});
+          });
+          hook.doneEach(function () {
+            mermaid.init(undefined,'.mermaid');
+          });
+        }
+      ],
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "mermaid") {
+              var html = '';
+              if(code.match(/^sequenceDiagram/) || code.match(/^graph/) || code.match(/^gantt/)){
+                html = '<div class="mermaid">' + code + '</div>';
+              }
+              var hl = Prism.highlight(code, Prism.languages[lang] || Prism.languages.markup)
+              // return html + '<pre v-pre data-lang="' + lang + '"><code class="lang-' + lang + '">' + hl + '</code></pre>'
+              return html;
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
