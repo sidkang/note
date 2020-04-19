@@ -2,6 +2,7 @@
 
 * **Inbox**
   * [Clash Gateway](inbox/clash-as-gateway.md)
+  * [JupyterLab](inbox/jupyter.md)
 
 * [**Computer**](computer/README.md)
   * [My Setup](computer/setup.md)
