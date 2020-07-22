@@ -6,6 +6,7 @@
 
 * [**Computer**](computer/README.md)
   * [My Setup](computer/setup.md)
+  * [Homelab Setup](computer/homelab_setup.md)
   * [My Mac]()
 
 * **Coding**
