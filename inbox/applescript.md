@@ -90,14 +90,14 @@ tell application "Microsoft Word"
 end tell
 ```
 
-### 
+### 复制Excel图形至Word文档
 
 ```applescript
 tell application "Microsoft Excel"
 	activate
 	open "/Users/kang/dev/ccx/scripts/THE_FILE.xlsx"
 	--activate object chart object "Chart 1" of sheet 1
-	copy object chart object "Chart 1" of worksheet "原始权益人分布"
+	copy object chart object "Chart 1" of worksheet "SOME_NAME"
 	--copy object active chart
 	close workbooks
 	quit
