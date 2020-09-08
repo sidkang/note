@@ -3,6 +3,7 @@
 * **Inbox**
   * [Clash Gateway](inbox/clash-as-gateway.md)
   * [JupyterLab](inbox/jupyter.md)
+  * [AppleScript](inbox/applescript.md)
 
 * [**Computer**](computer/README.md)
   * [My Setup](computer/setup.md)
@@ -11,6 +12,7 @@
 
 * **Coding**
   * [Python]()
+    * [Python Tips](coding/python/tips.md)
   * [Rust](coding/rust/README.md)
 
 - **Reference**

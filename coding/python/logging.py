@@ -1,0 +1,22 @@
+# %%
+import logging
+# %%
+logging.debug('Debug message')
+logging.info('Info message')
+logging.warning('Warning message')
+logging.error('Error message')
+logging.critical('Critical message')
+# %%
+logging.basicConfig(level=logging.INFO)
+logging.debug('Debug message')
+logging.info('Info message')
+logging.warning('Warning message')
+logging.error('Error message')
+logging.critical('Critical message')
+# %%
+logging.debug('Debug message')
+logging.info('Info message')
+logging.warning('Warning message')
+logging.error('Error message')
+logging.critical('Critical message')
+# %%
