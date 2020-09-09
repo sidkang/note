@@ -1,5 +1,21 @@
 # 自用AppleScript分享
 
+## 通过Python调用AppleScript
+
+```python
+#  install py-applescript lib
+#> pip install py-applescript
+
+import applescript
+
+scpt = applescript.AppleScript('''
+tell application "__ApplicationName__"
+	expression
+end tell
+''')
+scpt.run()
+```
+
 ## Office365联动
 
 ### Word全文中的高级替换及查找
