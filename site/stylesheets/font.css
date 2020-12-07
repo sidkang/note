@@ -1,0 +1,19 @@
+.md-typeset h1 {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.md-header-nav__topic {
+  font-weight: 900;
+  font-style: normal;
+}
+
+.md-typeset h5 {
+  /* color: var(--md-default-fg-color); */
+  text-transform: none;
+}

@@ -1,0 +1,1 @@
+{"config":{"lang":["ja"],"min_search_length":3,"prebuild_index":false,"separator":"[\\s\\-]+"},"docs":[{"location":"main/","text":"This is the title \u00b6 Main content.","title":"This is the title"},{"location":"main/#this-is-the-title","text":"Main content.","title":"This is the title"},{"location":"sample/ii/","text":"","title":"Ii"}]}
