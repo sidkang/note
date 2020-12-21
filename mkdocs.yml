@@ -6,7 +6,7 @@ theme:
   language: 'zh'
   icon:
     logo: material/text-box
-  favicon: logo.jpg
+    favicon: material/assistant
   font:
     text: Noto Sans SC
   palette:
