@@ -2,6 +2,10 @@
 
 ## 200 Gateway
 
+用途：
+1. 通过建立SS隧道，将端口暴露至路由器WAN口，使局域网外设备通过Surge类软件能够无痛访问局域网内资源
+2. 通过FRP服务端，将局域网外无公网IP的设备将其端口挂载至该LXC，使得其它客户端（局域网内、外）能够进行访问。
+
 ### FRP Server
 
 ```ini
@@ -42,6 +46,8 @@ tls_only = true
 
 ## 201 Docker Machine
 
+Docker VM之一，与Engine Docker VM的主要区别在于Docker内全局代理，而Engine为直连
+
 ### ACME.SH
 
 ```ini
@@ -52,7 +58,7 @@ USER_PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 ```bash
 # install acme.sh
-
+curl https://get.acme.sh | sh
 # renew generic domain certificate
 acme.sh --renew --force --dns dns_he --home /mnt/config/acme -d domain.com -d *.sub_domain.domain.com
 # Pkcs
@@ -111,7 +117,30 @@ docker run -d --restart=always \
 
 ## 204 Plex
 
+```ini
+mp0: /hpool/media,mp=/media
+mp1: /hpool/system/config/acme,mp=/acme
+
+net0: name=eth0,bridge=vmbr0,firewall=1,gw=192.168.2.240,hwaddr=5A:CA:16:F3:B7:26,ip=192.168.2.204/24,type=veth
+searchdomain: 198.18.0.2
+
+# map 1005
+lxc.idmap: u 0 100000 1005
+lxc.idmap: g 0 100000 1005
+lxc.idmap: u 1005 1005 1
+lxc.idmap: g 1005 1005 1
+lxc.idmap: u 1006 101006 64530
+lxc.idmap: g 1006 101006 64530
+
+# enable gpu
+lxc.cgroup.devices.allow: c 226:128 rwm
+lxc.cgroup.devices.allow: c 226:0 rwm
+lxc.mount.entry: /dev/dri/renderD128 dev/dri/renderD128 none bind,optional,create=file
+```
+
 ## 205 Jellyfin
+
+[Configure Reference](https://jellyfin.org/docs/general/administration/hardware-acceleration.html)
 
 ## 206 Webdav
 
