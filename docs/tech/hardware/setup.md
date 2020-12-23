@@ -1,3 +1,6 @@
+---
+hide_footer_nav: true
+---
 # Setups
 
 ## IT Equipments

@@ -3,7 +3,7 @@ site_description: Personal Notes
 
 theme:
   name: material
-  # custom_dir: overrides
+  custom_dir: overrides
   language: 'zh'
   icon:
     logo: material/text-box
@@ -11,9 +11,9 @@ theme:
   font:
     text: Noto Sans SC
   palette:
-    primary: 'deep purple'
+    primary: teal
     accent: pink
-    scheme: preference
+    scheme: default
   features:
     - navigation.tabs
 
@@ -33,7 +33,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 markdown_extensions:
-  - pymdownx.details
+  - pymdownx.details  # nesting of code and content blocks inside admonitions
   - pymdownx.snippets:
       check_paths: true
       base_path: "docs"
@@ -61,7 +61,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - markdown.extensions.attr_list
+  - markdown.extensions.attr_list  # add HTML attributes and CSS classes to Markdown elements
   - markdown.extensions.def_list
   - markdown.extensions.footnotes
   - markdown.extensions.admonition
