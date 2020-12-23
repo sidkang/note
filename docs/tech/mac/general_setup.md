@@ -1,13 +1,8 @@
-# Mac Setup
+# 常用配置项
 
-### 配置App属性
-
-#### iTerm
-
-#### Office365
+#### 将Office365的语言设置为中文
 
 ```bash
-# 设置为中文
 defaults write com.microsoft.Word AppleLanguages '("zh-cn")'
 defaults write com.microsoft.Excel AppleLanguages '("zh-cn")'
 defaults write com.microsoft.Powerpoint AppleLanguages '("zh-cn")'
