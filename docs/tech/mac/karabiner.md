@@ -1,8 +1,8 @@
 # Karabiner
 
-## My Usage
+## My Main Usage
 
-### Single Key To Switch Input Method
+### L_CMD/R_CMD Alone To Switch Input Method
 
 ### CAPS -> ESC, CAPS + ANY_KEY -> CTRL + SHFIT + CMD + ANY_KEY
 
