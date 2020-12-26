@@ -46,7 +46,7 @@ tls_only = true
 
 ## 201 Docker Machine
 
-Docker VM之一，与Engine Docker VM的主要区别在于Docker内全局代理，而Engine为直连
+Docker Host之一，全局Proxy
 
 ### ACME.SH
 
@@ -112,6 +112,8 @@ docker run -d --restart=always \
 ```
 
 ## 202 Engine
+
+Docker Host之二，网络直连
 
 ## 203 Sync
 

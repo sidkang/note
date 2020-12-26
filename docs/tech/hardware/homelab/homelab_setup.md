@@ -111,7 +111,7 @@ users:
     modify:   true
 ```
 
-```
+```ini
 # systemd file
 # /etc/systemd/system/webdav.service
 
