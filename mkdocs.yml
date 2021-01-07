@@ -74,3 +74,7 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.progressbar
+
+# avail_metadata:
+#   - hide_footer_nav: true or false
+#   - title: title used in navigation
