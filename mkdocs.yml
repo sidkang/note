@@ -15,7 +15,9 @@ theme:
     accent: pink
     scheme: default
   features:
+    - navigation.instant
     - navigation.tabs
+    - navigation.expand
 
 plugins:
   - search:
