@@ -5,14 +5,15 @@
 }
 
 .md-grid {
-  max-width: initial;
+  /* max-width: initial; */
+  max-width: 1200px;
 }
 
 /* 临时解决方案：网页标题无法被完整显示 */
 .md-ellipsis {
-  max-width: 1200px;
-  /* overflow: visible; */
-  }
+  
+  overflow: visible;
+}
 
 /* .md-sidebar--secondary {
   display: none;
