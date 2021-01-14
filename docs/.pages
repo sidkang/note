@@ -1,4 +1,7 @@
 nav:
+  - blog
   - tech
   - note
+  - leetcode
+  - life
   - ref

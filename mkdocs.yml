@@ -21,6 +21,7 @@ theme:
 
 plugins:
   - search:
+      # 中文搜索较弱，曲线救国达成部分搜索功能
       lang: ja
   - mermaid2
   - awesome-pages
@@ -30,7 +31,7 @@ extra_css:
   - stylesheets/extra.css
 extra_javascript:
   - javascripts/extra_mermaid.js
-  # MathJax Required
+  # Below is mathjax related 
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -78,6 +79,6 @@ markdown_extensions:
       generic: true
   - pymdownx.progressbar
 
-# avail_metadata:
+# available_metadata:
 #   - hide_footer_nav: true or false
 #   - title: title used in navigation

@@ -4,14 +4,19 @@
   /* --md-code-hl-color: #ade8f4; */
 }
 
+.callout {
+  float: right;
+  /* align: right; */
+}
+
 .md-grid {
+  /* 页面宽度 */
   /* max-width: initial; */
   max-width: 1360px;
 }
 
 /* 临时解决方案：网页标题无法被完整显示 */
 .md-ellipsis {
-  
   overflow: visible;
 }
 

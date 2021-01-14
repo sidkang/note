@@ -1,4 +1,4 @@
-# My Current Config
+# Current Config
 
 ```yaml
 --8<-- "../mkdocs.yml"
