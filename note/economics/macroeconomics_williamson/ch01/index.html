@@ -1,0 +1,854 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Personal Notes" name="description"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.1.5" name="generator"/>
+<title>01.Introduction - SID's</title>
+<link href="../../../../assets/stylesheets/main.bde7dde4.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ef6f36e2.min.css" rel="stylesheet"/>
+<meta content="#009485" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Noto Sans SC";--md-code-font-family:""}</style>
+<link href="../../../../stylesheets/font.css" rel="stylesheet"/>
+<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="pink" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduction">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="SID's" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="SID's">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 17H7v-2h7m3-2H7v-2h10m0-2H7V7h10m2-4H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            SID's
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              01.Introduction
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../blog/karabiner_goku/">
+        Blog
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../tech/mac/mac/">
+        Tech
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../../">
+        学习笔记
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../leetcode/">
+        LeetCode解题记录
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../life/cat/">
+        生活百科
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../ref/">
+        Mkdocs Config
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="SID's" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="SID's">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 17H7v-2h7m3-2H7v-2h10m0-2H7V7h10m2-4H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"></path></svg>
+</a>
+    SID's
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1">
+        Blog
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Blog" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../blog/karabiner_goku/">
+        Karabinier的高级配置伴侣Goku简介及实用分享
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Tech
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tech" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Mess Around Mac
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Mess Around Mac" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Mess Around Mac
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/mac/mac/">
+        Mac 配置步骤
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/mac/general_setup/">
+        常用配置项
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/mac/keyboard_maestro/">
+        Keyboard Maestro
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/mac/hammerspoon/">
+        Hammerspoon
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/mac/how_to_applescript/">
+        UI Scripting via AppleScript
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/mac/karabiner/">
+        Karabiner
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Hardware
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Hardware" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Hardware
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/hardware/setup/">
+        Setups
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/hardware/update/">
+        Update
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2_3">
+        Homelab
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Homelab" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_3">
+<span class="md-nav__icon md-icon"></span>
+          Homelab
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/hardware/homelab/dev_machine/">
+        Dev VM
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/hardware/homelab/homelab_setup/">
+        HomeLab Setup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/hardware/homelab/linux_init/">
+        Linux init
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/hardware/homelab/lxcs/">
+        HomeLab VMs
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_2_3" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3">
+        Python
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Python" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/python/logging/">
+        About Python Logging
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/python/pandas/">
+        Pandas Manual
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/python/resource/">
+        Useful Resource
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/python/tips/">
+        Python Tips Collection
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../tech/python/wheels/">
+        ABC
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        学习笔记
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="学习笔记" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          学习笔记
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../">
+        Index
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        经济学
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="经济学" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          经济学
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_3_2_1" id="__nav_3_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_1">
+        宏观经济学二十五讲
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="宏观经济学二十五讲" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_1">
+<span class="md-nav__icon md-icon"></span>
+          宏观经济学二十五讲
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../lectures_on_macroeconomics/">
+        Index
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../lectures_on_macroeconomics/ch01/">
+        01.有关中国经济的关键问题
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../lectures_on_macroeconomics/ch02/">
+        02.通过GDP认识中国经济
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../lectures_on_macroeconomics/ch03/">
+        中国经济增长的供给面分析
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../lectures_on_macroeconomics/ch04/">
+        发展战略与经济绩效
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../lectures_on_macroeconomics/ch05/">
+        均衡宏观经济学方法论
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" id="__nav_3_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_2">
+        宏观经济学(威廉森)
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="宏观经济学(威廉森)" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_2">
+<span class="md-nav__icon md-icon"></span>
+          宏观经济学(威廉森)
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          01.Introduction
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        01.Introduction
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#awhat-is-macroeconomics">
+    A.What is Macroeconomics
+  </a>
+<nav aria-label="A.What is Macroeconomics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#study-object">
+    Study Object 经济学的研究对象
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#macroeconomics-microeconomics">
+    Macroeconomics &amp; Microeconomics 宏观与微观
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bgross-domestic-product-economic-growth-business-cycle">
+    B.Gross Domestic Product, Economic Growth, Business Cycle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cmacroeconomic-models">
+    C.Macroeconomic Models
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dmicroeconomic-principles">
+    D.Microeconomic Principles
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#edisgreement-in-macroeconomics">
+    E.Disgreement in Macroeconomics
+  </a>
+<nav aria-label="E.Disgreement in Macroeconomics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#approach-to-be-taken-to-construct-models-of-economic-growth">
+    approach to be taken to construct models of economic growth 经济增长模型的构造
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#models-about-business-cycles">
+    Models about Business Cycles 经济周期理论
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fwhat-to-learn-from-macroeconomic-analysis">
+    F.What to Learn from Macroeconomic Analysis?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gunderstanding-recent-and-current-macroeconomic-events">
+    G.Understanding Recent and Current Macroeconomic Events
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zreview-questions">
+    Z.Review Questions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        LeetCode解题记录
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="LeetCode解题记录" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          LeetCode解题记录
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../leetcode/">
+        解题索引
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../leetcode/inbox/">
+        inbox
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../leetcode/array/">
+        01.Array类
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../leetcode/binary_tree/">
+        Binary Tree
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        生活百科
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="生活百科" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          生活百科
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_5_1" id="__nav_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1">
+        喵星人
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="喵星人" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_1">
+<span class="md-nav__icon md-icon"></span>
+          喵星人
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../life/cat/">
+        占位符
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../life/cat/raw_diet_basic/">
+        生骨肉初步
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        Mkdocs Config
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Mkdocs Config" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Mkdocs Config
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ref/">
+        title
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ref/current_config/">
+        Current Config
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3">
+        Markdown Ref
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Markdown Ref" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          Markdown Ref
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ref/markdown/">
+        Index
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#awhat-is-macroeconomics">
+    A.What is Macroeconomics
+  </a>
+<nav aria-label="A.What is Macroeconomics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#study-object">
+    Study Object 经济学的研究对象
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#macroeconomics-microeconomics">
+    Macroeconomics &amp; Microeconomics 宏观与微观
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bgross-domestic-product-economic-growth-business-cycle">
+    B.Gross Domestic Product, Economic Growth, Business Cycle
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cmacroeconomic-models">
+    C.Macroeconomic Models
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dmicroeconomic-principles">
+    D.Microeconomic Principles
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#edisgreement-in-macroeconomics">
+    E.Disgreement in Macroeconomics
+  </a>
+<nav aria-label="E.Disgreement in Macroeconomics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#approach-to-be-taken-to-construct-models-of-economic-growth">
+    approach to be taken to construct models of economic growth 经济增长模型的构造
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#models-about-business-cycles">
+    Models about Business Cycles 经济周期理论
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fwhat-to-learn-from-macroeconomic-analysis">
+    F.What to Learn from Macroeconomic Analysis?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gunderstanding-recent-and-current-macroeconomic-events">
+    G.Understanding Recent and Current Macroeconomic Events
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zreview-questions">
+    Z.Review Questions
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a></h1>
+<h2 id="awhat-is-macroeconomics">A.What is Macroeconomics<a class="headerlink" href="#awhat-is-macroeconomics" title="Permanent link">¶</a></h2>
+<h3 id="study-object">Study Object 经济学的研究对象<a class="headerlink" href="#study-object" title="Permanent link">¶</a></h3>
+<h3 id="macroeconomics-microeconomics">Macroeconomics &amp; Microeconomics 宏观与微观<a class="headerlink" href="#macroeconomics-microeconomics" title="Permanent link">¶</a></h3>
+<p>What continues to make macroeconomics distinct, though, is the issues it focuses on, particularly <strong>long-run growth</strong> and <strong>business cycles</strong>. Long-run growth refers to the increase in a nation’s productive capacity and average standard of living that occurs over a long period of time, whereas business cycles are the short-run ups and downs, or booms and recessions, in aggregate economic activity.</p>
+<h2 id="bgross-domestic-product-economic-growth-business-cycle">B.Gross Domestic Product, Economic Growth, Business Cycle<a class="headerlink" href="#bgross-domestic-product-economic-growth-business-cycle" title="Permanent link">¶</a></h2>
+<p>One measure of aggregate economic activity is <strong>gross domestic product (GDP)</strong>, which is the quantity of goods and services produced within a country’s borders during some specified period of time.</p>
+<h2 id="cmacroeconomic-models">C.Macroeconomic Models<a class="headerlink" href="#cmacroeconomic-models" title="Permanent link">¶</a></h2>
+<p>Macroeconomic Models is to explain long-run economic growth, why there are business cycles, and what role economic policy should play in the macroeconomy.</p>
+<p>All economic models are <strong>abstractions</strong>. They are not completely accurate descriptions of the world, nor are they intended to be. The purpose of an economic model is to capture the essential features of the world needed for analyzing a particular economic problem. To be useful then, a model must be simple, and simplicity requires that we leave out some "realistic" features of actual economies.</p>
+<p>the basic structure of a macroeconomic model is a description of the following features:<br/>
+1. The consumers and firms that interact in the economy<br/>
+2. The set of goods that consumers wish to consume<br/>
+3. Consumers’ preferences over goods<br/>
+4. The technology available to firms for producing goods<br/>
+5. The resources available</p>
+<p>In all the models we use in this book, we assume that consumers and firms <strong>optimize</strong>, that is, they do the best they can given the constraints they face. Second, we must specify how consistency is achieved in terms of the actions of consumers and firms. In economic models, this means that the economy must be in equilibrium. Several different concepts of equilibrium are used in economic models, but the one that we use most frequently in this book is <strong>competitive equilibrium</strong>.<br/>
+两个重要的假设：1）嘉定消费者与企业都尽可能要达到最优化；2）消费者与企业的行为要实现协调一致，这意味着经济需要处于均衡状态</p>
+<h2 id="dmicroeconomic-principles">D.Microeconomic Principles<a class="headerlink" href="#dmicroeconomic-principles" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>构建宏观经济学模型的最佳方式<br/>
+   基于微观模型，而不是经济指标间的数量关系</p>
+</li>
+<li>
+<p>宏观理论的发展<br/>
+   Rational Expectations Revolution<br/>
+   Lucas Critique</p>
+</li>
+</ol>
+<h2 id="edisgreement-in-macroeconomics">E.Disgreement in Macroeconomics<a class="headerlink" href="#edisgreement-in-macroeconomics" title="Permanent link">¶</a></h2>
+<h3 id="approach-to-be-taken-to-construct-models-of-economic-growth">approach to be taken to construct models of economic growth 经济增长模型的构造<a class="headerlink" href="#approach-to-be-taken-to-construct-models-of-economic-growth" title="Permanent link">¶</a></h3>
+<ol>
+<li>Solow growth model: framework for understanding the economic growth process<br/>
+   索洛增长模型：理解经济增长过程的框架</li>
+<li>Endogenous growth model: model the economic mechanism determining the rate of economic growth<br/>
+   内生增长模型：研究经济增长率的经济学机制</li>
+</ol>
+<h3 id="models-about-business-cycles">Models about Business Cycles 经济周期理论<a class="headerlink" href="#models-about-business-cycles" title="Permanent link">¶</a></h3>
+<p>Roughly, business cycle theories can be differentiated according to whether they are Keynesian or non-Keynesian.<br/>
+<strong>凯恩斯主义</strong>和<strong>非凯恩斯主义</strong></p>
+<p>Traditional Old Keynesian models, in the spirit of J. M. Keynes’s General Theory of Employment, Interest, and Money, published in 1936, are based on the notion that wages and prices are sticky in the short run, and do not change sufficiently quickly to yield efficient outcomes. In the Old Keynesian world, government intervention through monetary and fiscal policy can correct the inefficiencies that exist in private markets.<br/>
+老凯恩斯主义：</p>
+<p>The rational expectations revolution produced some non-Keynesian theories of the business cycle, including real business cycle theory, initiated by Edward Prescott and Finn Kydland in the early 1980s. Real business cycle theory implies that government policy aimed at smoothing business cycles is at best ineffective and at worst detrimental to the economy’s performance.<br/>
+非凯恩斯主义：</p>
+<p>In the 1980s and 1990s, Keynesians used the developments in macroeconomics that came out of the rational expectations revolution to integrate Keynesian economics with modern macroeconomic thought. The result was two new strands of Keynesian thought—coordination failures and New Keynesian economics.<br/>
+新凯恩斯主义：协调失效和新凯恩斯主义经济学</p>
+<p>In a coordination failure model of the business cycle, the economy can be stuck in a bad equilibrium, not because of sticky wages and prices, but because economic agents are self-fulfillingly pessimistic. Alternatively, New Keynesian models include sticky wages and prices, as in traditional Old Keynesian models, but New Keynesians use the microeconomic tools that all modern macroeconomists use.</p>
+<h2 id="fwhat-to-learn-from-macroeconomic-analysis">F.What to Learn from Macroeconomic Analysis?<a class="headerlink" href="#fwhat-to-learn-from-macroeconomic-analysis" title="Permanent link">¶</a></h2>
+<ol>
+<li>生产&amp;消费</li>
+<li>市场效率</li>
+<li>失业</li>
+<li>技术进步</li>
+<li>税收</li>
+<li>资本市场</li>
+<li>预期</li>
+<li>货币</li>
+<li>经济周期</li>
+<li>贸易</li>
+<li>通胀</li>
+<li>短期名义利率与通胀的关系</li>
+</ol>
+<h2 id="gunderstanding-recent-and-current-macroeconomic-events">G.Understanding Recent and Current Macroeconomic Events<a class="headerlink" href="#gunderstanding-recent-and-current-macroeconomic-events" title="Permanent link">¶</a></h2>
+<ol>
+<li>Aggregate Productivity 总生产率</li>
+<li>Unemployment and Vacancies 失业与职位空缺</li>
+<li>Taxes, Government Spending, the Government Deficit 税收、政府支出与政府赤字</li>
+<li>通胀</li>
+<li>利率</li>
+<li>美国的经济周期</li>
+<li>Credit Markets and the Finincial Crisis 信用市场和金融危机</li>
+<li>The Current Account Surplus 经常账户盈余</li>
+</ol>
+<h2 id="zreview-questions">Z.Review Questions<a class="headerlink" href="#zreview-questions" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>What are the primary defining characteristics of macroeconomics?主要特征？<br/>
+   Macroeconomics is the study of the behavior of large collections of economic agents. It focuses on the aggregate behavior of consumers and firms, the behavior of governments, the overall level of economic activity in individual countries, the economic interactions among nations, and the effects of fiscal and monetary policy.<br/>
+   宏观经济学是关注的是消费者和企业的总体行为、政府的行为、各个国家的经济活动总水平、各国家间的经济交往、财政政策和货币政策影响的学科。</p>
+</li>
+<li>
+<p>What makes macroeconomics different from microeconomics? What do they have in common?<br/>
+   均使用近似的研究工具，但宏观经济学更关注<strong>经济长期增长</strong>和<strong>经济运行周期</strong></p>
+</li>
+<li>
+<p>How is an improvement in the living standard of the average American measured? <br/>
+   用人均GDP的增长情况衡量</p>
+</li>
+<li>
+<p>What was the constant annual growth rate of real GDP per capita for the United States over the period 1900–2014?<br/>
+   Growth in per capita real GDP has been "roughly" constant at about 2.0% per year.</p>
+</li>
+<li>
+<p>List six fundamental macroeconomic questions.</p>
+</li>
+<li>
+<p>In a graph of the natural logarithm of an economic time series, what does the slope of the graph represent?</p>
+</li>
+<li>
+<p>What is the difference between the trend and the business cycle component of an eco- nomic time series?</p>
+</li>
+<li>Explain why experimentation is difficult in macroeconomics.</li>
+<li>Why should a macroeconomic model be simple?</li>
+<li>Should a macroeconomic model be an exact description of the world? Explain why or why not.</li>
+<li>What are the five features that a basic macroeconomic model should have?</li>
+<li>Why can macroeconomic models be useful? How do we determine whether or not they are useful?</li>
+<li>Explain why a macroeconomic model should be built from microeconomic principles.</li>
+<li>What are the two key threads in modern business cycle theory?</li>
+<li>Why was productivity growth low from 2010–2015?</li>
+<li>Why might the vacancy rate rise without a commensurate reduction in the unemployment rate?</li>
+<li>What is the crowding out effect?</li>
+<li>Why might a decrease in taxes have no effect?</li>
+<li>How does growth in money supply affect the inflation rate?</li>
+<li>Explain the difference between the nominal interest rate and the real interest rate. Compare the causes of the recession in 2001 to that in 1974–1975.</li>
+<li>What led to the large default premium in credit markets between 2008 and 2009? How does a government deficit lead to a current account deficit?</li>
+</ol>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<!-- use meta to hide footer in certain scene -->
+<!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.a1609d9a.min.js"></script>
+<script src="../../../../javascripts/extra_mermaid.js"></script>
+<script src="../../../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

@@ -1,0 +1,969 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Personal Notes" name="description"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.1.5" name="generator"/>
+<title>HomeLab Setup - SID's</title>
+<link href="../../../../assets/stylesheets/main.bde7dde4.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ef6f36e2.min.css" rel="stylesheet"/>
+<meta content="#009485" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Noto Sans SC";--md-code-font-family:""}</style>
+<link href="../../../../stylesheets/font.css" rel="stylesheet"/>
+<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="pink" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#homelab-setup">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="SID's" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="SID's">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 17H7v-2h7m3-2H7v-2h10m0-2H7V7h10m2-4H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            SID's
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              HomeLab Setup
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../blog/karabiner_goku/">
+        Blog
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../../mac/mac/">
+        Tech
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../note/">
+        学习笔记
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../leetcode/">
+        LeetCode解题记录
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../life/cat/">
+        生活百科
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../ref/">
+        Mkdocs Config
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="SID's" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="SID's">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 17H7v-2h7m3-2H7v-2h10m0-2H7V7h10m2-4H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"></path></svg>
+</a>
+    SID's
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1">
+        Blog
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Blog" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../blog/karabiner_goku/">
+        Karabinier的高级配置伴侣Goku简介及实用分享
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Tech
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Tech" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Tech
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Mess Around Mac
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Mess Around Mac" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Mess Around Mac
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mac/mac/">
+        Mac 配置步骤
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mac/general_setup/">
+        常用配置项
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mac/keyboard_maestro/">
+        Keyboard Maestro
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mac/hammerspoon/">
+        Hammerspoon
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mac/how_to_applescript/">
+        UI Scripting via AppleScript
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mac/karabiner/">
+        Karabiner
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Hardware
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Hardware" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Hardware
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../setup/">
+        Setups
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../update/">
+        Update
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_3" id="__nav_2_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2_3">
+        Homelab
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Homelab" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_2_3">
+<span class="md-nav__icon md-icon"></span>
+          Homelab
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dev_machine/">
+        Dev VM
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          HomeLab Setup
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        HomeLab Setup
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    硬件配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#host-setup">
+    Host Setup
+  </a>
+<nav aria-label="Host Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-host-os">
+    About Host OS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    底层配置
+  </a>
+<nav aria-label="底层配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    系统盘
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    数据存储
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pci-e-iommu">
+    开启PCI-E直通 IOMMU
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    关闭订阅提示
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    自定义设置
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guest-os-setup">
+    Guest OS Setup
+  </a>
+<nav aria-label="Guest OS Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setup-webdav-server">
+    setup WEBDAV server
+  </a>
+<nav aria-label="setup WEBDAV server" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps">
+    Steps
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../linux_init/">
+        Linux init
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lxcs/">
+        HomeLab VMs
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_2_3" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3">
+        Python
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Python" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../python/logging/">
+        About Python Logging
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../python/pandas/">
+        Pandas Manual
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../python/resource/">
+        Useful Resource
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../python/tips/">
+        Python Tips Collection
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../python/wheels/">
+        ABC
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        学习笔记
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="学习笔记" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          学习笔记
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../note/">
+        Index
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        经济学
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="经济学" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          经济学
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_3_2_1" id="__nav_3_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_1">
+        宏观经济学二十五讲
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="宏观经济学二十五讲" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_1">
+<span class="md-nav__icon md-icon"></span>
+          宏观经济学二十五讲
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../note/economics/lectures_on_macroeconomics/">
+        Index
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../note/economics/lectures_on_macroeconomics/ch01/">
+        01.有关中国经济的关键问题
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../note/economics/lectures_on_macroeconomics/ch02/">
+        02.通过GDP认识中国经济
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../note/economics/lectures_on_macroeconomics/ch03/">
+        中国经济增长的供给面分析
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../note/economics/lectures_on_macroeconomics/ch04/">
+        发展战略与经济绩效
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../note/economics/lectures_on_macroeconomics/ch05/">
+        均衡宏观经济学方法论
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_3_2_2" id="__nav_3_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_2">
+        宏观经济学(威廉森)
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="宏观经济学(威廉森)" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_2">
+<span class="md-nav__icon md-icon"></span>
+          宏观经济学(威廉森)
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../note/economics/macroeconomics_williamson/ch01/">
+        01.Introduction
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        LeetCode解题记录
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="LeetCode解题记录" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          LeetCode解题记录
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../leetcode/">
+        解题索引
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../leetcode/inbox/">
+        inbox
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../leetcode/array/">
+        01.Array类
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../leetcode/binary_tree/">
+        Binary Tree
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        生活百科
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="生活百科" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          生活百科
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_5_1" id="__nav_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1">
+        喵星人
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="喵星人" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_1">
+<span class="md-nav__icon md-icon"></span>
+          喵星人
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../life/cat/">
+        占位符
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../life/cat/raw_diet_basic/">
+        生骨肉初步
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        Mkdocs Config
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Mkdocs Config" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Mkdocs Config
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ref/">
+        title
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ref/current_config/">
+        Current Config
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-state="indeterminate" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3">
+        Markdown Ref
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Markdown Ref" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          Markdown Ref
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ref/markdown/">
+        Index
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    硬件配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#host-setup">
+    Host Setup
+  </a>
+<nav aria-label="Host Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-host-os">
+    About Host OS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    底层配置
+  </a>
+<nav aria-label="底层配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    系统盘
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    数据存储
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pci-e-iommu">
+    开启PCI-E直通 IOMMU
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    关闭订阅提示
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    自定义设置
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guest-os-setup">
+    Guest OS Setup
+  </a>
+<nav aria-label="Guest OS Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setup-webdav-server">
+    setup WEBDAV server
+  </a>
+<nav aria-label="setup WEBDAV server" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#steps">
+    Steps
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="homelab-setup">HomeLab Setup<a class="headerlink" href="#homelab-setup" title="Permanent link">¶</a></h1>
+<p>为了重新配置一次Homelab，开坑把现有的配置方案记录一遍</p>
+<h2 id="_1">硬件配置<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>型号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主板</td>
+<td>AsRock Rack E3C246D2I</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>Intel i5-8500</td>
+</tr>
+<tr>
+<td>内存</td>
+<td>DDR4 复仇者LPX 16Gx2</td>
+</tr>
+<tr>
+<td>机箱</td>
+<td>mineNAS迈K1</td>
+</tr>
+<tr>
+<td>电源</td>
+<td>机箱自带</td>
+</tr>
+<tr>
+<td>SSD</td>
+<td>256Gb x 2, 512Gb x 1</td>
+</tr>
+<tr>
+<td>HDD</td>
+<td>8Tb x 4</td>
+</tr>
+<tr>
+<td>PCI-E</td>
+<td>TP-LINK 8125</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>Oculink to 4xSata连接线</td>
+</tr>
+</tbody>
+</table>
+<h2 id="host-setup">Host Setup<a class="headerlink" href="#host-setup" title="Permanent link">¶</a></h2>
+<h3 id="about-host-os">About Host OS<a class="headerlink" href="#about-host-os" title="Permanent link">¶</a></h3>
+<p>Host系统使用proxmox作为底层系统</p>
+<h3 id="_2">底层配置<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<h4 id="_3">系统盘<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<h4 id="_4">数据存储<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<h4 id="pci-e-iommu">开启PCI-E直通 IOMMU<a class="headerlink" href="#pci-e-iommu" title="Permanent link">¶</a></h4>
+<h4 id="_5">关闭订阅提示<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sed -i.bak <span class="s2">"s/data.status !== 'Active'/false/g"</span> /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js <span class="o">&amp;&amp;</span> systemctl restart pveproxy.service
+</code></pre></div>
+</td></tr></table>
+<h3 id="_6">自定义设置<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<h2 id="guest-os-setup">Guest OS Setup<a class="headerlink" href="#guest-os-setup" title="Permanent link">¶</a></h2>
+<p>lxc.idmap: u 0 100000 1010<br/>
+lxc.idmap: g 0 100000 1010<br/>
+lxc.idmap: u 1010 1010 1<br/>
+lxc.idmap: g 1010 1010 1<br/>
+lxc.idmap: u 1011 101011 64525<br/>
+lxc.idmap: g 1011 101011 64525</p>
+<p>plex</p>
+<p>lxc.idmap: u 0 100000 1010<br/>
+lxc.idmap: g 0 100000 1010<br/>
+lxc.idmap: u 1010 1010 1<br/>
+lxc.idmap: g 1010 1010 1<br/>
+lxc.idmap: u 1011 101011 64525<br/>
+lxc.idmap: g 1011 101011 64525<br/>
+lxc.cgroup.devices.allow: c 226:0 rwm<br/>
+lxc.cgroup.devices.allow: c 226:128 rwm<br/>
+lxc.cgroup.devices.allow: c 29:0 rwm<br/>
+lxc.mount.entry: /dev/dri/renderD128 dev/dri/renderD128 none bind,optional,create=file<br/>
+lxc.mount.entry: /dev/dri/card0 dev/dri/card0 none bind,optional,create=file<br/>
+lxc.mount.entry: /dev/dri/fb0 dev/dri/fb0 none bind,optional,create=file</p>
+<p>mp1: /hpool/download,mp=/download<br/>
+mp2: /hpool/media,mp=/media<br/>
+mp3: /hpool/document,mp=/document</p>
+<h3 id="setup-webdav-server">setup WEBDAV server<a class="headerlink" href="#setup-webdav-server" title="Permanent link">¶</a></h3>
+<h4 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">¶</a></h4>
+<ol>
+<li>https://github.com/hacdias/webdav</li>
+<li></li>
+</ol>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># webdav.yaml</span>
+
+<span class="c1"># Server related settings</span>
+<span class="nt">address</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.0.0.0</span>
+<span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="nt">auth</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">tls</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+
+<span class="c1"># Default user settings (will be merged)</span>
+<span class="nt">scope</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/mnt</span>
+<span class="nt">modify</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">rules</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+
+<span class="c1"># CORS configuration</span>
+<span class="nt">cors</span><span class="p">:</span>
+  <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">credentials</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">allowed_headers</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Depth</span>
+  <span class="nt">allowed_hosts</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">http://localhost:8080</span>
+  <span class="nt">allowed_methods</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">GET</span>
+  <span class="nt">exposed_headers</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Content-Length</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Content-Range</span>
+
+<span class="nt">users</span><span class="p">:</span>
+
+  <span class="p p-Indicator">-</span> <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">password</span>
+    <span class="nt">modify</span><span class="p">:</span>   <span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># systemd file</span>
+<span class="c1"># /etc/systemd/system/webdav.service</span>
+
+<span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">WebDAV server</span>
+<span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+
+<span class="k">[Service]</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
+<span class="na">User</span><span class="o">=</span><span class="s">media</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/bin/webdav --config /home/media/webdav.yaml</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">on-failure</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</code></pre></div>
+</td></tr></table>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<!-- use meta to hide footer in certain scene -->
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../dev_machine/" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                Dev VM
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../linux_init/" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                Linux init
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
+<!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.a1609d9a.min.js"></script>
+<script src="../../../../javascripts/extra_mermaid.js"></script>
+<script src="../../../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

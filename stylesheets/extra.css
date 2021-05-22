@@ -1,0 +1,49 @@
+:root > * {
+  /* 代码块高亮颜色 */
+  --md-code-hl-color: #ffefd3;
+  /* --md-code-hl-color: #ade8f4; */
+}
+
+.callout {
+  float: right;
+  /* align: right; */
+}
+
+.md-grid {
+  /* 页面宽度 */
+  /* max-width: initial; */
+  max-width: 1360px;
+}
+
+/* 临时解决方案：网页标题无法被完整显示 */
+.md-ellipsis {
+  overflow: visible;
+}
+
+/* .md-sidebar--secondary {
+  display: none;
+} */
+
+/* @media only screen and (min-width: 60em) {
+  .md-content {
+    margin-right: 0;
+  }
+} */
+
+/* @media only screen and (min-width: 76.25em) {
+  .md-main__inner {
+    max-width: none;
+  }
+  .md-sidebar--primary {
+    left: 0;
+  }
+  .md-sidebar--secondary {
+    right: 0;
+    margin-left: 0;
+    -webkit-transform: none;
+    transform: none;   
+  }
+} */
+
+
+
